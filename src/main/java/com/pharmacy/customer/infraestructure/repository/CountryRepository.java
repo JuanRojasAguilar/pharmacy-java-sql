@@ -82,16 +82,22 @@ public class CustomerRepository implements CustomerService {
   @Override
   public Optional<List<Customer>> showAllInstances() {
     List<Customer> customers = new ArrayList<>();
-    String sql = "SELECT * FROM countries";
+    String sql = "SELECT * FROM customer";
     try (PreparedStatement statement = connection.prepareStatement(sql)) {
       ResultSet result = statement.executeQuery(sql);
       while (result.next()) {
-        Country resultCountry = new Country();
-        resultCountry.setId(result.getInt("id_country"));
-        resultCountry.setName(result.getString("name"));
-        countries.add(resultCountry);
+int idCustomer = result.getInt("id_customer");
+        String firstName = result.getString("first_name");
+        String lastName = result.getString("last_name");
+        String email = result.getString("email");
+        Date birthDate = result.getDate("birth_date");
+        double longitude = result.getDouble("longitude");
+        double latitude = result.getDouble("latitude");
+
+        Customer customer = new Customer(idCustomer, firstName, lastName, email, birthDate, longitude, latitude);
+        customers.add(customer)
       }
-      return Optional.of(countries);
+      return Optional.of(customers);
     } catch (SQLException e) {
       e.printStackTrace();
     }
@@ -99,7 +105,7 @@ public class CustomerRepository implements CustomerService {
   }
 
   @Override
-  public void update(Country country) {
+  public void update(Customer customer) {
     String sql = "UPDATE countries SET name = ? WHERE id = ?";
     try {
       PreparedStatement statement = connection.prepareStatement(sql);
