@@ -1,10 +1,18 @@
-package com.pharmacy.country.domain.entity;
+package com.pharmacy.customer.domain.entity;
 
-public class Country {
+import java.sql.Date;
+
+public class Customer {
   private int id;
-  private String name;
+  private String firstName;
+  private String lastName;
+  private int id_city;
+  private String email;
+  private Date birthDate;
+  private double longitude;
+  private double latitude;
 
-  public Country() {}
+  public Customer() {}
   
   public int getId() {
     return this.id;
