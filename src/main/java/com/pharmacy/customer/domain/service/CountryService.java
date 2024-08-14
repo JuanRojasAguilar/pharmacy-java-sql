@@ -1,13 +1,15 @@
-package com.pharmacy.country.domain.service;
+package com.pharmacy.customer.domain.service;
 
-import com.pharmacy.country.domain.entity.Country;
+import com.pharmacy.customer.domain.entity.Customer;
+import com.pharmacy.customer.domain.entity.CustomerDTO;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface CountryService {
-  void add(Country country);
-  Optional<Country> findById(int id);
-  Optional<List<Country>> showAllInstances();
-  void update(Country country);
+public interface CustomerService {
+  void add(Customer customer);
+  Optional<Customer> findById(int id);
+  Optional<List<CustomerDTO>> showAllInstances();
+  void update(Customer customer);
+  void delete(int id);
 }
