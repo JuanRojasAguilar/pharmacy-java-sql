@@ -1,1 +1,10 @@
 /Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/App.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/application/AddCountryUseCase.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/application/FindCountryByIdUseCase.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/application/ShowAllCountriesUseCase.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/application/UpdateCountryUseCase.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/domain/entity/Country.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/domain/service/CountryService.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/infraestructure/controller/CountryController.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/infraestructure/controller/CreateCountryController.java
+/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/src/main/java/com/pharmacy/country/infraestructure/repository/CountryRepository.java

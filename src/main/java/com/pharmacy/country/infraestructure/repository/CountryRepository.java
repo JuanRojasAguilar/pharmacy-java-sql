@@ -92,7 +92,9 @@ public class CountryRepository implements CountryService {
       PreparedStatement statement = connection.prepareStatement(sql);
       statement.setString(1, country.getName());
       statement.setInt(2, country.getId());
+      statement.executeUpdate(sql);
+    } catch (SQLException e) {
+      e.printStackTrace();
     }
-    
   }
 }

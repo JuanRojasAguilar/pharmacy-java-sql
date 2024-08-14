@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CO"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire/surefirebooter-20240813150816624_3.jar /Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire 2024-08-13T15-08-16_565-jvmRun1 surefire-20240813150816624_1tmp surefire_0-20240813150816624_2tmp"/>
+    <property name="sun.java.command" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire/surefirebooter-20240813210827088_3.jar /Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire 2024-08-13T21-08-27_043-jvmRun1 surefire-20240813210827088_1tmp surefire_0-20240813210827088_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/test-classes:/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/classes:/Users/juanrojas/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/juanrojas/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/Users/juanrojas/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire/surefirebooter-20240813150816624_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire/surefirebooter-20240813210827088_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="22.0.2"/>
