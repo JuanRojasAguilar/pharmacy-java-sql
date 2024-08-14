@@ -10,10 +10,12 @@ import java.sql.ResultSet;
 import java.util.Optional;
 import java.util.Properties;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CountryRepository implements CountryService {
   private Connection connection;
-    
+
   public CountryRepository() {
     try {
       Properties props = new Properties();
@@ -46,7 +48,7 @@ public class CountryRepository implements CountryService {
     }
   }
 
-  @Override 
+  @Override
   public Optional<Country> findById(int id) {
     String sql = "SELECT * FROM countries WHERE id_country = ?";
     try {
@@ -62,5 +64,35 @@ public class CountryRepository implements CountryService {
       e.printStackTrace();
     }
     return Optional.empty();
+  }
+
+  @Override
+  public Optional<List<Country>> showAllInstances() {
+    List<Country> countries = new ArrayList<>();
+    String sql = "SELECT * FROM countries";
+    try (PreparedStatement statement = connection.prepareStatement(sql)) {
+      ResultSet result = statement.executeQuery(sql);
+      while (result.next()) {
+        Country resultCountry = new Country();
+        resultCountry.setId(result.getInt("id_country"));
+        resultCountry.setName(result.getString("name"));
+        countries.add(resultCountry);
+      }
+      return Optional.of(countries);
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return Optional.empty();
+  }
+
+  @Override
+  public void update(Country country) {
+    String sql = "UPDATE countries SET name = ? WHERE id = ?";
+    try {
+      PreparedStatement statement = connection.prepareStatement(sql);
+      statement.setString(1, country.getName());
+      statement.setInt(2, country.getId());
+    }
+    
   }
 }
