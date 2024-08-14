@@ -6,13 +6,24 @@ public class Customer {
   private int id;
   private String firstName;
   private String lastName;
-  private int id_city;
+  private int idCity;
   private String email;
   private Date birthDate;
   private double longitude;
   private double latitude;
 
   public Customer() {}
+  
+  public Customer(int id, String firstName, String lastName, int idCity, String email, Date birthDate, double longitude, double latitude) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.idCity = idCity;
+    this.email = email;
+    this.birthDate = birthDate;
+    this.longitude = longitude;
+    this.latitude = latitude;
+  }
   
   public int getId() {
     return this.id;
@@ -22,11 +33,19 @@ public class Customer {
     this.id = id;
   }
 
-  public String getName() {
-    return this.name;
+  public String getFirstName() {
+    return this.firstName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public String getLastName() {
+    return this.lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 }
