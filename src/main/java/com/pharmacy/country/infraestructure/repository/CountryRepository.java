@@ -37,7 +37,7 @@ public class CountryRepository implements CountryService {
     try {
       PreparedStatement statement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
       statement.setString(1, country.getName());
-      statement.executeUpdate();
+      statement.executeUpdate(sql);
 
       try (ResultSet generatedKey = statement.getGeneratedKeys()) {
         if (generatedKey.next()) {

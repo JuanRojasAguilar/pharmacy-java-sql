@@ -25,6 +25,7 @@ public class CreateCustomerController extends JFrame implements ActionListener {
 
   public CreateCustomerController() {
     setLayout(null);
+    setLocationRelativeTo(null);
     setBounds(0, 0, 460, 600);
 
     idLabel = new JLabel("ID:");
@@ -67,12 +68,11 @@ public class CreateCustomerController extends JFrame implements ActionListener {
     register.setForeground(new Color(255, 255, 255));
     add(register);
 
-    setLocationRelativeTo(null);
     setResizable(false);
     setVisible(true);
   }
 
-  private void addCountriesToBox(JComboBox comboBox) {
+  private void addCountriesToBox(JComboBox<String> comboBox) {
     countryRepository = new CountryRepository();
     Optional<List<Country>> countryList = countryRepository.showAllInstances();
     countryList.ifPresent(list -> {

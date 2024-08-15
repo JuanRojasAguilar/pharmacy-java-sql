@@ -9,13 +9,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import com.pharmacy.country.domain.entity.Country;
+import com.pharmacy.country.infraestructure.repository.CountryRepository;
+
 public class CreateCountryController extends JFrame implements ActionListener {
+  private CountryRepository countryRepository;
   private final JLabel nameLabel;
   private final JTextField nameField;
   private final JButton cancel, register;
 
   public CreateCountryController() {
     setLayout(null);
+    setLocationRelativeTo(null);
     setBounds(0, 0, 330, 150);
     setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
@@ -41,11 +46,17 @@ public class CreateCountryController extends JFrame implements ActionListener {
     cancel.setForeground(Color.white);
     add(cancel);    
 
-    setLocationRelativeTo(null);
     setResizable(false);
     setVisible(true);
   }
 
   @Override
-  public void actionPerformed(ActionEvent e) {}
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource() == register) {
+      countryRepository = new CountryRepository();
+      Country country = new Country();
+      country.setName(nameField.getText());
+      countryRepository.add(country);
+    }
+  }
 }
