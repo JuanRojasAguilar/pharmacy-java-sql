@@ -1,62 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.pharmacy.AppTest" time="0.013" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.pharmacy.AppTest" time="0.029" tests="1" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="22"/>
+    <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/test-classes:/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/classes:/Users/juanrojas/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/juanrojas/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/Users/juanrojas/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:"/>
-    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="java.class.path" value="/home/camper/juanro/javita/pharmacy-java-sql/target/test-classes:/home/camper/juanro/javita/pharmacy-java-sql/target/classes:/home/camper/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/camper/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/home/camper/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="java.vm.specification.version" value="22"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CO"/>
-    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire/surefirebooter-20240813210827088_3.jar /Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire 2024-08-13T21-08-27_043-jvmRun1 surefire-20240813210827088_1tmp surefire_0-20240813210827088_2tmp"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.boot.library.path" value="/opt/jdk-17/lib"/>
+    <property name="sun.java.command" value="/home/camper/juanro/javita/pharmacy-java-sql/target/surefire/surefirebooter-20240815121813934_3.jar /home/camper/juanro/javita/pharmacy-java-sql/target/surefire 2024-08-15T12-18-13_830-jvmRun1 surefire-20240815121813934_1tmp surefire_0-20240815121813934_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/test-classes:/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/classes:/Users/juanrojas/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/juanrojas/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/Users/juanrojas/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:"/>
+    <property name="surefire.test.class.path" value="/home/camper/juanro/javita/pharmacy-java-sql/target/test-classes:/home/camper/juanro/javita/pharmacy-java-sql/target/classes:/home/camper/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/camper/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/home/camper/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/Users/juanrojas"/>
-    <property name="user.language" value="en"/>
+    <property name="user.home" value="/home/camper"/>
+    <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2024-07-16"/>
-    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="/opt/jdk-17"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql"/>
+    <property name="basedir" value="/home/camper/juanro/javita/pharmacy-java-sql"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql/target/surefire/surefirebooter-20240813210827088_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/camper/juanro/javita/pharmacy-java-sql/target/surefire/surefirebooter-20240815121813934_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.runtime.version" value="22.0.2"/>
-    <property name="user.name" value="juanrojas"/>
-    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.runtime.version" value="17.0.7+8-LTS-224"/>
+    <property name="user.name" value="camper"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="14.5"/>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="os.version" value="6.5.0-44-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="java.vendor.version" value="Homebrew"/>
-    <property name="localRepository" value="/Users/juanrojas/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
-    <property name="java.io.tmpdir" value="/var/folders/vz/9wctkx8s35b614y9prhx4cnh0000gn/T/"/>
-    <property name="java.version" value="22.0.2"/>
-    <property name="user.dir" value="/Users/juanrojas/Documents/code/campusland/pharmacy-java-sql"/>
-    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/camper/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.7"/>
+    <property name="user.dir" value="/home/camper/juanro/javita/pharmacy-java-sql"/>
+    <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/juanrojas/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="UTF-8"/>
-    <property name="java.vendor" value="Homebrew"/>
-    <property name="java.vm.version" value="22.0.2"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.class.version" value="66.0"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.7+8-LTS-224"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testApp" classname="com.pharmacy.AppTest" time="0.001"/>
+  <testcase name="testApp" classname="com.pharmacy.AppTest" time="0.002"/>
 </testsuite>

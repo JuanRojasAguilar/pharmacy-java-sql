@@ -1,17 +1,18 @@
 package com.pharmacy.customer.infraestructure.repository;
 
-import com.pharmacy.customer.domain.entity.CustomerDTO;
-import com.pharmacy.customer.domain.service.CustomerService;
 import java.sql.Connection;
-import java.sql.SQLException;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Optional;
-import java.util.Properties;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.Date;
+import java.util.Optional;
+import java.util.Properties;
+
+import com.pharmacy.customer.domain.entity.CustomerDTO;
+import com.pharmacy.customer.domain.service.CustomerService;
 
 public class CustomerRepository implements CustomerService {
   private Connection connection;
@@ -153,6 +154,7 @@ public class CustomerRepository implements CustomerService {
       return result.getInt("id_city");
     } catch (SQLException e) {
       e.printStackTrace();
+      return 0;
     }
   }
 }

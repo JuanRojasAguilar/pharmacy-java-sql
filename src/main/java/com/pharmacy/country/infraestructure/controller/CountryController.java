@@ -1,16 +1,18 @@
 package com.pharmacy.country.infraestructure.controller;
 
-import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import com.pharmacy.country.infraestructure.controller.CreateCountryController;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 public class CountryController extends JFrame implements ActionListener {
   private JButton addNew, search, list, update, delete;
 
   public CountryController() {
     setLayout(null);
-    setBounds(0, 0, 220, 300);
+    setLocationRelativeTo(null);
+    setBounds(0, 0, 220, 360);
 
     addNew = new JButton("Añadir Pais");
     addNew.setBounds(10, 10, 200, 50);
@@ -37,6 +39,7 @@ public class CountryController extends JFrame implements ActionListener {
     delete.addActionListener(this);
     add(delete);
 
+    setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     setResizable(false);
     setVisible(true);
   }

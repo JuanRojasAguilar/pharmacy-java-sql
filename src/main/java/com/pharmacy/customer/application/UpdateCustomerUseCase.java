@@ -1,6 +1,6 @@
 package com.pharmacy.customer.application;
 
-import com.pharmacy.customer.domain.entity.Customer;
+import com.pharmacy.customer.domain.entity.CustomerDTO;
 import com.pharmacy.customer.domain.service.CustomerService;
 
 public class UpdateCustomerUseCase {
@@ -10,7 +10,7 @@ public class UpdateCustomerUseCase {
     this.customerService = customerService;
   }
 
-  public void execute(Customer customer) {
+  public void execute(CustomerDTO customer) {
     customerService.update(customer);
   }
 }

@@ -1,16 +1,11 @@
 package com.pharmacy;
 
-import com.pharmacy.country.infraestructure.controller.CountryController;
+import com.pharmacy.menu.WelcomeMenu;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        CountryController countryController = new CountryController();
+        WelcomeMenu welcome = new WelcomeMenu();
     }
 }

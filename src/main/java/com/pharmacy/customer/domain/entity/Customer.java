@@ -1,7 +1,6 @@
 package com.pharmacy.customer.domain.entity;
 
 import java.sql.Date;
-import java.util.Calendar;
 
 public class Customer {
   private int id;
@@ -68,11 +67,6 @@ public class Customer {
 
   public Date getBirthDate() {
     return birthDate;
-  }
-
-  public java.sql.Date getSqlDate() {
-    int year = birthDate.valueOf("y");
-    java.sql.Date sqlDate = new java.sql.Date(id, id, id);
   }
 
   public void setBirthDate(Date birthDate) {
