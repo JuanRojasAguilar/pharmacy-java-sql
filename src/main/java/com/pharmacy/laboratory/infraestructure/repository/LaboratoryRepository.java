@@ -1,7 +1,7 @@
-package com.pharmacy.country.infraestructure.repository;
+package com.pharmacy.laboratory.infraestructure.repository;
 
-import com.pharmacy.country.domain.entity.Country;
-import com.pharmacy.country.domain.service.CountryService;
+import com.pharmacy.laboratory.domain.entity.Laboratory;
+import com.pharmacy.laboratory.domain.service.LaboratoryService;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.DriverManager;
@@ -9,14 +9,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Optional;
 import java.util.Properties;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CountryRepository implements CountryService {
+public class LaboratoryRepository implements LaboratoryService {
   private Connection connection;
 
-  public CountryRepository() {
+  public LaboratoryRepository() {
     try {
       Properties props = new Properties();
       props.load(getClass().getClassLoader().getResourceAsStream("db.properties"));
@@ -30,17 +29,17 @@ public class CountryRepository implements CountryService {
   }
 
   @Override
-  public void add(Country country) {
+  public void add(Laboratory laboratory) {
     String sql = "INSERT INTO countries (name) VALUES (?)";
 
     try {
       PreparedStatement statement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
-      statement.setString(1, country.getName());
+      statement.setString(1, laboratory.getName());
       statement.executeUpdate();
 
       try (ResultSet generatedKey = statement.getGeneratedKeys()) {
         if (generatedKey.next()) {
-          country.setId(generatedKey.getInt(1));
+          laboratory.setId(generatedKey.getInt(1));
         }
       }
     } catch (SQLException e) {
@@ -49,16 +48,16 @@ public class CountryRepository implements CountryService {
   }
 
   @Override
-  public Optional<Country> findById(int id) {
-    String sql = "SELECT * FROM countries WHERE id_country = ?";
+  public Optional<Laboratory> findById(int id) {
+    String sql = "SELECT * FROM countries WHERE id_laboratory = ?";
     try {
       PreparedStatement statement = connection.prepareStatement(sql);
       statement.setInt(1, id);
       try (ResultSet result = statement.executeQuery(sql)) {
-        Country country = new Country();
-        country.setId(result.getInt("id_country"));
-        country.setName(result.getString("name"));
-        return Optional.of(country);
+        Laboratory laboratory = new Laboratory();
+        laboratory.setId(result.getInt("id_laboratory"));
+        laboratory.setName(result.getString("name"));
+        return Optional.of(laboratory);
       }
     } catch (SQLException e) {
       e.printStackTrace();
@@ -67,16 +66,16 @@ public class CountryRepository implements CountryService {
   }
 
   @Override
-  public Optional<List<Country>> showAllInstances() {
-    List<Country> countries = new ArrayList<>();
+  public Optional<List<Laboratory>> showAllInstances() {
+    List<Laboratory> countries = new ArrayList<>();
     String sql = "SELECT * FROM countries";
     try (PreparedStatement statement = connection.prepareStatement(sql)) {
       ResultSet result = statement.executeQuery(sql);
       while (result.next()) {
-        Country resultCountry = new Country();
-        resultCountry.setId(result.getInt("id_country"));
-        resultCountry.setName(result.getString("name"));
-        countries.add(resultCountry);
+        Laboratory resultLaboratory = new Laboratory();
+        resultLaboratory.setId(result.getInt("id_laboratory"));
+        resultLaboratory.setName(result.getString("name"));
+        countries.add(resultLaboratory);
       }
       return Optional.of(countries);
     } catch (SQLException e) {
@@ -86,12 +85,12 @@ public class CountryRepository implements CountryService {
   }
 
   @Override
-  public void update(Country country) {
+  public void update(Laboratory laboratory) {
     String sql = "UPDATE countries SET name = ? WHERE id = ?";
     try {
       PreparedStatement statement = connection.prepareStatement(sql);
-      statement.setString(1, country.getName());
-      statement.setInt(2, country.getId());
+      statement.setString(1, laboratory.getName());
+      statement.setInt(2, laboratory.getId());
       statement.executeUpdate(sql);
     } catch (SQLException e) {
       e.printStackTrace();

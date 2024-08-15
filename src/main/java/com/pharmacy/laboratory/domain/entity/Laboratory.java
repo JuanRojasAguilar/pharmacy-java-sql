@@ -1,10 +1,11 @@
-package com.pharmacy.country.domain.entity;
+package com.pharmacy.laboratory.domain.entity;
 
-public class Country {
+public class Laboratory {
   private int id;
   private String name;
+  private int idCity;
 
-  public Country() {}
+  public Laboratory() {}
   
   public int getId() {
     return this.id;
@@ -20,5 +21,13 @@ public class Country {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public int getIdCity() {
+    return this.idCity;
+  }
+
+  public void setIdCity(int idCity) {
+    this.idCity = idCity;
   }
 }

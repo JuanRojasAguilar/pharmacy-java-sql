@@ -12,9 +12,9 @@ public class CustomerDTO {
   private double longitude;
   private double latitude;
 
-  public Customer() {}
+  public CustomerDTO() {}
   
-  public Customer(int id, String firstName, String lastName, String city, String email, Date birthDate, double longitude, double latitude) {
+  public CustomerDTO(int id, String firstName, String lastName, String city, String email, Date birthDate, double longitude, double latitude) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
@@ -47,5 +47,45 @@ public class CustomerDTO {
 
   public void setLastName(String lastName) {
     this.lastName = lastName;
+  }
+
+  public String getCity() {
+    return this.city;
+  }
+
+  public void setCity(String city) {
+    this.city = city;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public Date getBirthDate() {
+    return birthDate;
+  }
+
+  public void setBirthDate(Date birthDate) {
+    this.birthDate = birthDate;
+  }
+
+  public double getLongitude() {
+    return longitude;
+  }
+
+  public void setLongitude(double longitude) {
+    this.longitude = longitude;
+  }
+
+  public double getLatitude() {
+    return latitude;
+  }
+
+  public void setLatitude(double latitude) {
+    this.latitude = latitude;
   }
 }
